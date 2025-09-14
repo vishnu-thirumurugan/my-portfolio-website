@@ -1,14 +1,17 @@
 @media screen and (max-width: 1400px) {
   #profile {
-    height: 83vh;
-    margin-bottom: 6rem;
+    min-height: 70vh;
+    margin-bottom: 4rem;
   }
   .about-containers {
     flex-wrap: wrap;
   }
+  section {
+    padding: 4rem 6rem;
+  }
   #contact,
   #projects {
-    height: fit-content;
+    min-height: auto;
   }
 }
 
@@ -18,8 +21,10 @@
   }
   #hamburger-nav {
     display: flex;
+  #profile,
+  .section-container {
+    padding: 0 1.25rem;
   }
-  #experience,
   .experience-details-container {
     margin-top: 2rem;
   }
@@ -32,42 +37,54 @@
   }
   section,
   .section-container {
-    height: fit-content;
+    min-height: auto;
   }
   section {
-    margin: 0 5%;
-  }
-  .section__pic-container {
-    width: 275px;
-    height: 275px;
+  .about-containers { margin-top: 0; }
+  /* Stack About section on tablet */
+  #about .section-container { display: block; }
+  .about-details-container { flex: 1 1 auto; }
+  .about-image-container { margin-top: 1rem; }
+    width: 220px;
+    height: 220px;
     margin: 0 auto 2rem;
   }
   .about-containers {
     margin-top: 0;
   }
+  .about-card { margin-bottom: 1rem; flex: 1 1 auto; }
+  .about-card .about__pic-container { width: 100%; height: auto; }
+  /* Projects: Maintain single column layout on tablets */
+  #projects .about-containers { max-width: 700px; }
+  /* Hobbies: single column on tablets for readability */
+  #hobbies .about-containers { grid-template-columns: 1fr; }
 }
 
 @media screen and (max-width: 600px) {
   #contact,
   footer {
-    height: 40vh;
+    min-height: 40vh;
   }
   #profile {
-    height: 83vh;
+    min-height: 70vh;
     margin-bottom: 0;
   }
   article {
     font-size: 1rem;
   }
   footer nav {
-    height: fit-content;
-    margin-bottom: 2rem;
+    height: auto;
+    margin-bottom: 1rem;
   }
   .about-containers,
   .contact-info-upper-container,
   .btn-container {
     flex-wrap: wrap;
   }
+  /* Full-width About on mobile */
+  #about .section-container { display: block; }
+  .about-details-container, .about-image-container { flex: 1 1 100%; }
+  .about-image-container { margin-top: 1rem; }
   .contact-info-container {
     margin: 0;
   }
@@ -79,7 +96,7 @@
     font-size: 1.25rem;
   }
   .logo {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
   .nav-links {
     flex-direction: column;
@@ -87,12 +104,12 @@
     text-align: center;
   }
   .section__pic-container {
-    width: auto;
-    height: 46vw;
+    width: 45vw;
+    height: 45vw;
     justify-content: center;
   }
   .section__text__p2 {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
   }
   .title {
     font-size: 2rem;
@@ -100,4 +117,10 @@
   .text-container {
     text-align: justify;
   }
+  .about-card { flex-basis: auto; }
+  .about-card .about__pic-container { width: 100%; }
+  /* Projects: maintain single column on mobile */
+  #projects .about-containers { max-width: 100%; }
+  /* Hobbies: single column on mobile */
+  #hobbies .about-containers { grid-template-columns: 1fr; }
 }
