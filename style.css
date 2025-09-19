@@ -63,14 +63,27 @@ section { padding: 5rem 10rem; margin: 0 auto; min-height: fit-content; }
 /* Skills and Projects Grid */
 .experience-details-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(2, 1fr); /* Always 2 columns on desktop */
   gap: 2rem;
   width: 100%;
 }
 
+.skills-card {
+  background: var(--surface);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+.card-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
 #projects .about-containers {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(2, 1fr); /* Always 2 columns on desktop */
   gap: 2rem;
   width: 100%;
 }
@@ -180,19 +193,8 @@ article { display: flex; width: 10rem; justify-content: space-around; gap: .5rem
 .hobby-points li { list-style: disc; color: var(--muted); }
 
 /* Footer */
-footer { 
-  min-height: auto; 
-  margin: 0 1rem 2rem; 
-  padding: 2rem 0;
-}
-footer p { 
-  text-align: center; 
-}
-footer .nav-links-container {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 1.5rem;
-}
+footer { min-height: 20vh; margin: 0 1rem 2rem; }
+footer p { text-align: center; }
 
 /* Reveal animations */
 [data-reveal] { opacity: 0; transform: translateY(12px); }

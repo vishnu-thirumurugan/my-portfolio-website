@@ -109,12 +109,21 @@
   /* Skills section mobile layout */
   #experience {
     padding: 1rem;
+    margin-bottom: 2rem;
   }
   .experience-details-container {
     display: flex !important;
     flex-direction: column !important;
     gap: 1.5rem;
     width: 100%;
+  }
+  .skills-card {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+  .card-content {
+    flex-direction: column !important;
+    align-items: flex-start !important;
   }
   .about-containers {
     display: flex;
@@ -137,6 +146,9 @@
     width: 100%;
   }
   /* Contact section mobile layout */
+  #contact {
+    margin-bottom: 4rem; /* Add space before footer */
+  }
   .contact-info-upper-container {
     display: flex;
     flex-direction: column;
@@ -144,6 +156,7 @@
     width: 100%;
     max-width: 100%;
     padding: 0.5rem;
+    margin-bottom: 2rem;
   }
   .contact-info-container {
     width: 100%;
@@ -161,15 +174,27 @@
   }
   /* Footer mobile layout */
   footer {
-    padding: 1rem;
-    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: auto;
+  }
+  footer nav {
+    margin-bottom: 2rem;
   }
   footer .nav-links {
-    display: none; /* Hide footer nav links on mobile */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    text-align: left;
+    margin-bottom: 2rem;
+  }
+  footer .nav-links li {
+    margin: 0;
   }
   footer p {
-    font-size: 0.8rem;
-    line-height: 1.4;
+    font-size: 0.85rem;
+    text-align: center;
+    padding: 1rem 0;
+    border-top: 1px solid rgba(0,0,0,0.1);
   }
   .menu-links {
     display: none;
