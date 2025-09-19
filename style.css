@@ -180,8 +180,19 @@ article { display: flex; width: 10rem; justify-content: space-around; gap: .5rem
 .hobby-points li { list-style: disc; color: var(--muted); }
 
 /* Footer */
-footer { min-height: 20vh; margin: 0 1rem 2rem; }
-footer p { text-align: center; }
+footer { 
+  min-height: auto; 
+  margin: 0 1rem 2rem; 
+  padding: 2rem 0;
+}
+footer p { 
+  text-align: center; 
+}
+footer .nav-links-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
 
 /* Reveal animations */
 [data-reveal] { opacity: 0; transform: translateY(12px); }
