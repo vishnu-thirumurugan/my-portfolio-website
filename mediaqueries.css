@@ -280,6 +280,21 @@
   .nav-links li a {
     font-size: 0.9rem;
   }
+  
+  /* Footer mobile layout */
+  footer {
+    padding: 1rem;
+  }
+  footer nav {
+    display: none; /* Hide the footer navigation on mobile */
+  }
+  footer p {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #475569;
+    padding: 1rem 0 0.5rem;
+    margin: 0;
+  }
 }
 
 /* Extra small devices (phones, 375px and below) */
