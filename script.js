@@ -5,6 +5,14 @@ function toggleMenu() {
   icon.classList.toggle("open");
 }
 
+// Close menu when a link is clicked (for mobile)
+document.querySelectorAll('.menu-links a').forEach(link => {
+  link.addEventListener('click', () => {
+    document.querySelector('.menu-links').classList.remove('open');
+    document.querySelector('.hamburger-icon').classList.remove('open');
+  });
+});
+
 // Reveal on scroll
 (function revealSetup(){
   const els = document.querySelectorAll('[data-reveal]');
