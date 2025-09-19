@@ -198,26 +198,32 @@
     cursor: pointer;
     display: flex;
     flex-direction: column;
-    gap: 5px;
-    padding: 8px;
-    margin: -8px;
+    gap: 6px;
+    padding: 10px;
+    margin: -10px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
   }
   .hamburger-icon span {
     display: block;
-    width: 24px;
-    height: 2px;
+    width: 28px;
+    height: 3px;
     background: #0f172a;
-    border-radius: 2px;
+    border-radius: 3px;
     transition: all 0.3s;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+  .hamburger-icon:hover span {
+    background: #2563eb;
   }
   .hamburger-icon.open span:first-child {
-    transform: rotate(45deg) translate(6px, 5px);
+    transform: rotate(45deg) translate(7px, 7px);
   }
   .hamburger-icon.open span:nth-child(2) {
     opacity: 0;
   }
   .hamburger-icon.open span:last-child {
-    transform: rotate(-45deg) translate(6px, -5px);
+    transform: rotate(-45deg) translate(7px, -7px);
   }
   .section__pic-container img,
   .about-image,
