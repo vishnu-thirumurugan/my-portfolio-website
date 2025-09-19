@@ -64,10 +64,18 @@
   section {
     padding: 1rem;
   }
+  /* Profile section mobile layout */
   #profile {
     padding: 1rem;
     min-height: auto;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  #profile .section__pic-container {
+    order: -1; /* Makes profile pic appear first */
   }
   #desktop-nav {
     display: none;
@@ -98,19 +106,58 @@
   .section__text__p2 {
     font-size: 1rem;
   }
-  /* Make skills appear one by one on mobile */
+  /* Skills section mobile layout */
+  #experience {
+    padding: 1rem;
+  }
   .experience-details-container {
-    display: grid;
-    grid-template-columns: 1fr !important;
+    display: flex !important;
+    flex-direction: column !important;
     gap: 1.5rem;
     width: 100%;
   }
-  /* Make projects appear one by one on mobile */
+  .about-containers {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  /* About section mobile layout */
+  #about .section-container {
+    display: flex;
+    flex-direction: column;
+  }
+  #about .about-image-container {
+    order: 1; /* Places image after education card */
+  }
+  /* Projects mobile layout */
   #projects .about-containers {
     display: grid;
     grid-template-columns: 1fr !important;
     gap: 1.5rem;
     width: 100%;
+  }
+  /* Contact section mobile layout */
+  .contact-info-upper-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    max-width: 100%;
+    padding: 0.5rem;
+  }
+  .contact-info-container {
+    width: 100%;
+    max-width: none;
+    padding: 1rem;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .contact-icon {
+    width: 2rem;
+    height: 2rem;
   }
   .menu-links {
     display: none;
